@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<div class="page-title-area">
+  <div class="container">
+    <div class="page-title-content">
+      <ul>
+        <li><a routerLink="/">الرئيسية</a></li>
+        <li>الدورات التدريبية</li>
+      </ul>
+      <h2>الدورات التدريبية</h2>
+    </div>
+  </div>
+  <div class="shape9"><img src="assets/img/shape8.svg" alt="image"></div>
+</div>
+
+<div class="courses-area ptb-100">
+  <div class="container">
+    <!--<div class="odemy-grid-sorting row align-items-center">
+        <div class="col-lg-6 col-md-6 result-count">
+            <p>We found <span class="count">12</span> courses available for you</p>
+        </div>
+        <div class="col-lg-6 col-md-6 ordering">
+            <div class="select-box">
+                <label>Sort By:</label>
+                <select>
+                    <option>Default</option>
+                    <option>Popularity</option>
+                    <option>Latest</option>
+                    <option>Price: low to high</option>
+                    <option>Price: high to low</option>
+                </select>
+            </div>
+        </div>
+    </div>-->
+    <div class="d-flex align-items-center justify-content-center py-5" *ngIf="loader">
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let filed of allCourses">
+        <div class="single-courses-box">
+          <div class="courses-image">
+<!--            <a routerLink="/details-courses" class="d-block image">-->
+            <a href="javascript:void(0)" (click)="goTo(filed.id)" class="d-block image">
+              <img [src]="urlImage + filed.image" [alt]="filed.title">
+            </a>
+            <!--                        <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a>-->
+            <div class="price shadow">
+              <div>{{filed.price}}</div>
+              ر.س
+            </div>
+          </div>
+          <div class="courses-content pt-5">
+            <!--<div class="course-author d-flex align-items-center">
+                <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                <span>{{filed.teachersId}}</span>
+            </div>-->
+            <h3><a href="javascript:void(0)" (click)="goTo(filed.id)">{{filed.title}}</a></h3>
+            <p>{{filed.body}}</p>
+            <ul class="courses-box-footer d-flex justify-content-between align-items-center">
+              <!--                            <li><i class='flaticon-agenda'></i> 15 Lessons</li>-->
+              <!--<li *ngIf="filed.numberOfStudents"><i class='flaticon-people'></i> عدد الطلاب : {{filed.numberOfStudents}}
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--<div class="col-lg-12 col-md-12">
+        <div class="pagination-area text-center">
+          <a routerLink="/courses" class="prev page-numbers"><i class='bx bx-chevrons-left'></i></a>
+          <span class="page-numbers current" aria-current="page">1</span>
+          <a routerLink="/courses" class="page-numbers">2</a>
+          <a routerLink="/courses" class="page-numbers">3</a>
+          <a routerLink="/courses" class="page-numbers">4</a>
+          <a routerLink="/courses" class="next page-numbers"><i class='bx bx-chevrons-right'></i></a>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="navbar-area" ngStickyNav stickyClass="sticky-box-shadow" ngStickyNav>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" [class.active]="classApplied">
+            <a class="navbar-brand" routerLink="/"><img style="height: 50px" src="assets/img/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                <span class="burger-menu">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!--  <form class="search-box">
+                    <input type="text" class="input-search" placeholder="بحث ...">
+                    <button type="submit"><i class="flaticon-search"></i></button>
+                </form>-->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">الرئيسية</a></li>
+                    <li class="nav-item"><a routerLink="/courses" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">الدورات التدريبية</a></li>
+                    <li class="nav-item"><a routerLink="/teacher" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">المدربين</a></li>
+                    <li class="nav-item"><a routerLink="/login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">تسجيل الدخول </a></li>
+                    <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">معلومات عنا</a></li>
+                    <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">اتصل بنا</a></li>
+                    <li class="nav-item"><a routerLink="/privacy-policy" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">سياسة الخصوصية</a></li>
+                  </ul>
+                <ul class="navbar-nav for-responsive">
+                    <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">الرئيسية</a></li>
+                    <li class="nav-item"><a routerLink="/courses" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">الدورات التدريبية</a></li>
+                    <li class="nav-item"><a routerLink="/teacher" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">المدربين</a></li>
+                    <li class="nav-item"><a routerLink="/login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">تسجيل الدخول </a></li>
+                    <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">معلومات عنا</a></li>
+                    <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">اتصل بنا</a></li>
+                     <li class="nav-item"><a routerLink="/privacy-policy" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="others-option d-flex align-items-center">
+               <!-- <div class="option-item">
+                    <div class="cart-btn">
+                        <a routerLink="/cart"><i class='flaticon-shopping-cart'></i><span>3</span></a>
+                    </div>
+                </div>-->
+                <!--<div class="option-item">
+                    <a routerLink="/profile-authentication" class="default-btn"><i class="flaticon-user"></i>تسجيل الدخول<span></span></a>
+                </div>-->
+            </div>
+        </nav>
+    </div>
+</div>
